@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 /*middleware to set headers*/
 
-/* Get all records from Personalcosts*/
+/* Get all records from Budjetcatagories*/
 
 router.get("/data",(req,res)=>{
 	models.BC.findAll({})
@@ -25,7 +25,7 @@ router.get("/data",(req,res)=>{
 })
 
 
-/*Http Post request-Add a record to Personalcosts*/
+/*Http Post request-Add a record to Budjetcatagories*/
 
 router.post("/data/post/",(req,res)=>{
     let BCId=req.body.BCId
@@ -52,7 +52,7 @@ res.send({
 	});
 })
 
-/*Http-put request-to update a record on Personalcosts*/
+/*Http-put request-to update a record on Budjetcatagories*/
 
 router.put("/data/update/all/",(req,res)=>{
 
@@ -101,7 +101,7 @@ router.put("/data/update/all/",(req,res)=>{
 });
 
 
-/*Http-delete request- delete a particular record from Personalcosts*/
+/*Http-delete request- delete a particular record from Budjetcatagories*/
 
 router.delete("/data/delete/:BCId",(req,res)=>{
 	let BCId=req.params.BCId
